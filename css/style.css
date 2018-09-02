@@ -3,3 +3,19 @@ body{
 	background-color: coral;
 	margin: 2em;
 }
+#details{
+	display: none;
+}
+#catDetails{
+	display: none;
+	float: right;
+    text-align: left;
+    border: 3px solid green;
+}
+
+#adminBlock{
+	float: right;
+    text-align: left;
+    border: 3px solid red;
+}
+

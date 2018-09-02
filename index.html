@@ -5,27 +5,37 @@
 	<title>Cat Clicker Premium Pro!</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body><h1>Cat Clicker Premium </h1><h2>Pro!</h2>
+<body><h2>Cat Clicker Premium Pro!</h2>
 	<div id='catlist'>		
 	</div>
 		<div class ='catNo'>Cat#: 
 		</div>
 		<div class="clickNumber">No. of clicks#: 
 		</div>
-	<div id='cat_placeholder'>
-	</div>
+		<div id='cat_placeholder'>
+			<div id='catDetails'><h3>CatDetail</h3>
+				<span class='name'></span><br>
+				<span class='ImageUrl'></span><br>
+				<span class='NoOfClicks'></span><br>
+
 <!------req. 3--------->
-	<div>
-		<button id='admin'>Admin</button><br>
-		<input>Name</input><br>
-		<input>ImageUrl</input><br>
-		<input>No.OfClicks</input>
-		<button id='cancel'>Cancel</button>
-			<span>
-				<button id='save'>Save</button>
-			</span>
-		
-	</div>
+				<span id='adminBlock'>
+					<button id='admin'>Admin</button><br>
+					<div id='details'>
+						<input class='name'>Name</input><br>
+						<input class='ImageUrl'>ImageUrl</input><br>
+						<input class='NoOfClicks'>No.Of Clicks</input>
+						<button id='cancel'>Cancel</button>
+							<span>
+								<button id='save'>Save</button>
+							</span>
+					</div>		
+				</span>
+			</div>
+
+<!------req. 3--------->
+		</div>
+
 
 	<script src="js/app.js"></script>
 </body>

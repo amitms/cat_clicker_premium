@@ -15,6 +15,7 @@
     var octopus = {
         init: function(){           
             view.init();
+            view.admin();
         },
 
        
@@ -62,7 +63,17 @@
             catNo.textContent = `Cat#: ${data.CurID}`;       
             let curCatClicks = document.querySelector('.clickNumber');
             let curCatIndex = parseInt(data.CurID.replace(/[^0-9\.]/g, ''), 10)-1;
-            curCatClicks.textContent = `No. of clicks# ${data.curCatCount[curCatIndex]} Meow`;     
+            curCatClicks.textContent = `No. of clicks# ${data.curCatCount[curCatIndex]} Meow`;   
+            /********req. 3**********/
+            let CatDetail = document.getElementById("catDetails");   
+            CatDetail.style.display = "inline";         
+
+            let name = document.querySelector(".name");  
+            let ImageUrl = document.querySelector(".ImageUrl");  
+            let NoOfClicks = document.querySelector(".NoOfClicks");  
+            name.textContent = `name: ${data.CurID}`;
+            ImageUrl.textContent = `ImageUrl: ${data.curCatImg}`;
+            NoOfClicks.textContent = `NoOfClicks: ${data.curCatCount[curCatIndex]}`;          
         },
 
         catClickCounter: function(){
@@ -74,6 +85,15 @@
 
             //alert(parseInt(data.CurID.replace(/[^0-9\.]/g, ''), 10));     
         });
+        },
+
+        admin: function(){
+            let details = document.getElementById("details");
+            if (details.style.display === "none") {
+                details.style.display = "inline";
+            } else {
+                details.style.display = "none";
+            }
         }
 
 
@@ -90,11 +110,18 @@
             for (var i=1; i<= noOfCats; i++){
                 var id = i;
                 octopus.bindButtonToCat(id);
-                data.curCatCount.push(1);
+                data.curCatCount.push(0);
             };
             octopus.setImage();   
             octopus.catClickCounter(); 
+        },
+        admin: function(){
+            var admin = document.getElementById("admin");  
+            admin.addEventListener('click',function(){
+                octopus.admin();
+            });
         }
+
     };
 
 /**************************************/
