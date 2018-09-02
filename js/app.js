@@ -50,7 +50,7 @@
             cImg = document.createElement("img");
             cImg.setAttribute('src', 'images/cat_picture1.jpg');
             cImg.setAttribute('alt', 'na');
-            cImg.setAttribute('width', '800px');
+            cImg.setAttribute('width', '500px');
             this.cImg = cImg;
             catImgView.appendChild(cImg);                 
         },
